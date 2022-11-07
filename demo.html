@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maple</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <link rel="icon" href="./picture/mapleicon.png" type="image/x-icon" />
+    <!-- <link rel="stylesheet" href="./Coolcss/Cool.css"> -->
+    <style>
+        /* 紅線  */
+        * {
+            border: 1px red solid;
+        }
+
+        /* nav and icon */
+        body {
+            background-image: url("./picture/background_img.jpeg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-color: rgba(0, 0, 0, 0.85);
+            background-blend-mode: multiply;
+            background-position: center 50px;
+            background-attachment: fixed;
+
+        }
+
+        #mapleicon {
+            height: 50px;
+            width: 50px;
+        }
+
+
+        li a {
+            color: white;
+        }
+
+        li a:hover {
+            color: white;
+        }
+
+
+        #navbarSupportedContent {
+            width: 80px;
+            text-align: center;
+        }
+
+        #navbarSupportedContent li {
+            width: 120px;
+            text-align: left;
+            font-size: 22px;
+        }
+
+
+        .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+        }
+
+        /* end */
+
+        /* button animate*/
+
+        .button-animate::after {
+            content: "";
+            width: 0%;
+            height: 0%;
+            display: block;
+            box-sizing: border-box;
+            border-bottom: 0px solid white;
+            position: static;
+            bottom: 0;
+            right: 0;
+            transition: all .3s ease;
+        }
+
+
+        .button-animate:hover::after {
+            border-bottom: 1px solid white;
+            width: 100%;
+            height: 100%;
+        }
+
+
+        /* slider */
+
+        .slider-outdiv {
+            padding-top: 60px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        #slider {
+            color: white;
+            height: 90vh;
+            display: flex;
+            align-items: center;
+            width: 1560px;
+            /* width: 100%; */
+        }
+
+        #slider div {
+            display: flex;
+            justify-content: center;
+            padding: 10px;
+            margin: 10px;
+            min-width: 500px;
+            height: 300px;
+            position: relative;
+            /* left: -1040px; */
+        }
+
+        #slider div img {
+            width: 90%;
+            max-width: 500px;
+            object-fit: contain;
+            user-select: none;
+        }
+
+        #slider div img.onlight {
+            width: 99%;
+            max-width: 500px;
+            object-fit: contain;
+        }
+
+        .dark {
+            filter: brightness(0.3);
+            transition-duration: 0.5s;
+
+        }
+
+        .bright {
+            filter: brightness(1);
+            transition-duration: 0.5s;
+            /* border: 3px white solid; */
+        }
+
+
+        /* 動作class */
+        .moveleft {
+            animation-name: leftmove;
+            animation-duration: 0.8s;
+            animation-timing-function: cubic-bezier(.36, .37, .57, 1);
+            animation-fill-mode: forwards;
+        }
+
+        .moveright {
+            animation-name: rightmove;
+            animation-duration: 0.8s;
+            animation-timing-function: cubic-bezier(.36, .37, .57, 1);
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes leftmove {
+            to {
+                transform: translateX(520px);
+            }
+        }
+
+        @keyframes rightmove {
+            to {
+                transform: translateX(-520px);
+            }
+        }
+
+        .moveleft2 {
+            animation-name: leftmove2;
+            animation-duration: 0.8s;
+            animation-timing-function: cubic-bezier(.36, .37, .57, 1);
+            animation-fill-mode: forwards;
+        }
+
+        .moveright2 {
+            animation-name: rightmove2;
+            animation-duration: 0.8s;
+            animation-timing-function: cubic-bezier(.36, .37, .57, 1);
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes leftmove2 {
+            to {
+                transform: translateX(1040px);
+            }
+        }
+
+        @keyframes rightmove2 {
+            to {
+                transform: translateX(-1040px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="blackbg"></div>
+
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top" style=" background-color: black">
+        <div class="container-fluid">
+            <!-- 左上蘑菇 -->
+            <a class="navbar-brand" href="">
+                <img src="./picture/mapleicon.png" alt="" id="mapleicon">
+            </a>
+
+
+            <!-- 漢堡 -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- 選單 -->
+            <div class="collapse navbar-collapse justify-content-center mr-0" id="navbarSupportedContent">
+                <ul class="navbar-nav">
+
+                    <li class="nav-item">
+                        <a class="nav-link button-animate" aria-current="page" href="#">首頁</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link button-animate" href="#">音樂</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link button-animate" href="#">關於</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">楓谷</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 輪盤 -->
+    <div class="slider-outdiv">
+        <div id="slider" class="">
+            <div>
+                <img src="./picture/perion.jpeg" alt="" class="dark">
+            </div>
+
+            <div>
+                <img src="./picture/henesys.jpeg" alt="" class="dark">
+            </div>
+
+            <div>
+                <img src="./picture/ellinia.jpeg" alt="" class="dark">
+            </div>
+
+            <div>
+                <img src="./picture/kerning.jpeg" alt="" class="dark">
+            </div>
+
+            <div>
+                <img src="./picture/lith.jpeg" alt="" class="dark">
+            </div>
+
+            <div>
+                <img src="./picture/perion.jpeg" alt="" class="dark">
+            </div>
+
+            <div>
+                <img src="./picture/henesys.jpeg" alt="" class="dark">
+            </div>
+
+            <div>
+                <img src="./picture/ellinia.jpeg" alt="" class="dark">
+            </div>
+
+            <div>
+                <img src="./picture/kerning.jpeg" alt="" class="dark">
+            </div>
+
+            <div>
+                <img src="./picture/lith.jpeg" alt="" class="dark">
+            </div>
+
+            <div>
+                <img src="./picture/perion.jpeg" alt="" class="dark">
+            </div>
+
+            <div>
+                <img src="./picture/henesys.jpeg" alt="" class="dark">
+            </div>
+
+            <div>
+                <img src="./picture/ellinia.jpeg" alt="" class="dark">
+            </div>
+
+            <div>
+                <img src="./picture/kerning.jpeg" alt="" class="dark">
+            </div>
+
+            <div>
+                <img src="./picture/lith.jpeg" alt="" class="dark">
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+
+        // 圖片點擊
+        // 亮度
+        $(function () {
+            var len = $("#slider div").length;
+            var num = parseInt(len / 2);
+            var lock = 1;
+
+            $("#slider div").css("left", `${(num - 1) * -520}px`)
+
+            $("#slider div").eq(num).find("img").addClass("bright onlight").removeClass("dark");
+
+            // 點擊
+
+            $("#slider div img").click(function () {
+                if (lock) {
+
+                    lock = 0;
+                    var index = $("#slider div img").index(this);
+
+
+                    if (index == num) {
+                        window.location.href='http://www.google.com';
+                    }
+                    // 焦點
+                    if (index != num) {
+                        // 本尊發光
+                        $("#slider div").eq(index).find("img").addClass("bright onlight");
+                        $("#slider div").eq(num).find("img").addClass("dark").removeClass("bright onlight");
+
+                        // 分身發光
+
+                        $("#slider div").eq(num + len / 3).find("img").addClass("dark").removeClass("bright onlight");
+                        $("#slider div").eq(index + len / 3).find("img").addClass("bright onlight");
+                        $("#slider div").eq(num - len / 3).find("img").addClass("dark").removeClass("bright onlight");
+                        $("#slider div").eq(index - len / 3).find("img").addClass("bright onlight");
+
+
+                        // 畫面到另一邊
+                        if (index < len - len / 3) {
+                            index += len / 3
+                            num += len / 3
+                        }
+
+                        if (index >= len - len / 3) {
+                            index -= len / 3
+                            num -= len / 3
+                        }
+
+                        // 跳到分身的位置
+                        $("#slider div").css("left", `${(num - 1) * -520}px`)
+                    }
+
+                    // 左移
+                    if (num > index) {
+                        if (num == index + 1) {
+                            $("#slider div").each(function () {
+                                $(this).addClass("moveleft")
+                            });
+
+                            setTimeout(function () {
+                                $("#slider div").each(function () {
+                                    $(this).removeClass("moveleft")
+                                });
+
+                                $("#slider div").css("left", `${(index - 1) * -520}px`)
+
+                                lock = 1;
+                            }, 800)
+                        }
+
+                        if (num == index + 2) {
+                            $("#slider div").each(function () {
+                                $(this).addClass("moveleft2")
+                            });
+
+                            setTimeout(function () {
+                                $("#slider div").each(function () {
+                                    $(this).removeClass("moveleft2")
+                                });
+
+                                $("#slider div").css("left", `${(index - 1) * -520}px`)
+
+                                lock = 1;
+                            }, 800)
+                        }
+
+                    }
+
+                    // 右移
+                    if (num < index) {
+                        if (num == index - 1) {
+                            // console.log("start");
+                            $("#slider div").each(function () {
+                                $(this).addClass("moveright")
+                            });
+
+                            // console.log("removed")
+                            setTimeout(function () {
+                                $("#slider div").each(function () {
+                                    $(this).removeClass("moveright")
+                                });
+                                $("#slider div").css("left", `${(index - 1) * -520}px`)
+
+                                lock = 1;
+                            }, 800)
+                        }
+
+                        if (num == index - 2) {
+                            // console.log("start");
+                            $("#slider div").each(function () {
+                                $(this).addClass("moveright2")
+                            });
+
+                            // console.log("removed")
+                            setTimeout(function () {
+                                $("#slider div").each(function () {
+                                    $(this).removeClass("moveright2")
+                                });
+
+                                $("#slider div").css("left", `${(index - 1) * -520}px`)
+
+                                lock = 1;
+                            }, 800)
+                        }
+
+                        console.log($("#slider div"))
+
+                    }
+
+                    num = index;
+                }
+            })
+        })
+
+    </script>
+</body>
+
+</html>
