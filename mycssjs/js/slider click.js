@@ -20,11 +20,11 @@
 
                     // 點選發亮
                     // if (index == num) {
-
+                    //     sqwe
                     // }
 
 
-                    // 焦點
+                    // 點選不發量
                     if (index != num) {
                         // 本尊發光
                         $("#slider div").eq(index).find("img").addClass("bright onlight");
