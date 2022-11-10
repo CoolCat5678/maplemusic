@@ -1,0 +1,54 @@
+/* nav style */
+
+#mapleicon {
+    height: 50px;
+    width: 50px;
+}
+
+
+li a {
+    color: white;
+}
+
+li a:hover {
+    color: white;
+}
+
+
+#navbarSupportedContent {
+    width: 80px;
+    text-align: center;
+}
+
+#navbarSupportedContent li {
+    width: 120px;
+    text-align: left;
+    font-size: 22px;
+}
+
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+/* button animate*/
+
+.button-animate::after {
+    content: "";
+    width: 0%;
+    height: 0%;
+    display: block;
+    box-sizing: border-box;
+    border-bottom: 0px solid white;
+    position: static;
+    bottom: 0;
+    right: 0;
+    transition: all .3s ease;
+}
+
+
+.button-animate:hover::after {
+    border-bottom: 1px solid white;
+    width: 100%;
+    height: 100%;
+}
