@@ -1,121 +1,141 @@
-        /* slider */
+/* slider */
 
-        .slider-outdiv {
-            padding-top: 60px;
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            overflow: hidden;
-            /* border: 2px yellow solid; */
-        }
+.slider-outdiv {
+    padding-top: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    /* border: 2px yellow solid; */
+}
 
-        #slider {
-            color: white;
-            height: 90vh;
-            display: flex;
-            align-items: center;
-            width: 1560px;
-            border: 2px rgb(69, 227, 69) solid;
-            /* overflow: hidden; */
-            /* padding-left: 500px; */
-            /* width: 100%; */
-        }
+#slider {
+    color: white;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    width: 1560px;
+    /* border: green 2px solid; */
+    /* border: 2px rgb(69, 227, 69) solid; */
+    /* background-color: rgb(193, 71, 71); */
+    /* overflow: hidden; */
+    /* padding-left: 1500px; */
+}
 
-        @media (min-width: 2600px) {
-            #slider {
-                overflow: hidden;
-                width: 2600px;
-                /* border: 2px rgb(12, 172, 235) solid; */
-                padding-left: 500px;
-            }
-        }
+@media (min-width: 2600px) {
+    #slider {
+        overflow: hidden;
+        width: 2600px;
+        /* border: 2px rgb(12, 172, 235) solid; */
+        padding-left: 500px;
+    }
+}
 
-        #slider div {
-            display: flex;
-            justify-content: center;
-            padding: 10px;
-            margin: 10px;
-            min-width: 500px;
-            height: 300px;
-            position: relative;
-            /* overflow: hidden; */
-        }
+#slider div {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    margin: 10px;
+    min-width: 500px;
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+    /* border: 1px white solid; */
+    /* background-color: #fff; */
+}
 
-        #slider div img {
-            width: 90%;
-            max-width: 500px;
-            object-fit: contain;
-            user-select: none;
-        }
+#slider div.slowmove {
+    transition-duration : 0.8s;
+}
 
-        #slider div img.onlight {
-            width: 99%;
-            max-width: 500px;
-            object-fit: contain;
-        }
+#slider div.openimg {
+    transform: scale(3);
+    /* border: 1px white solid; */
+    transition-duration: 0.8s;
+}
 
-        /* 亮度暗度動畫 */
-        .dark {
-            filter: brightness(0.3);
-            transition-duration: 0.5s;
+/* slider img */
+#slider div img {
+    width: 90%;
+    max-width: 500px;
+    object-fit: contain;
+    user-select: none;
+}
 
-        }
+#slider div img.onlight {
+    width: 99%;
+    max-width: 500px;
+    object-fit: contain;
+}
 
-        .bright {
-            filter: brightness(1);
-            transition-duration: 0.5s;
-        }
+#slider div.openimg img.onlight {
+    width: 99%;
+    max-width: 1500px;
+    object-fit: contain;
+}
 
 
-        /* 動作class */
-        .moveleft {
-            animation-name: leftmove;
-            animation-duration: 0.8s;
-            animation-timing-function: cubic-bezier(.36, .37, .57, 1);
-            animation-fill-mode: forwards;
-        }
+/* 亮度暗度動畫 */
+.dark {
+    filter: brightness(0.3);
+    transition-duration: 0.5s;
+}
 
-        .moveright {
-            animation-name: rightmove;
-            animation-duration: 0.8s;
-            animation-timing-function: cubic-bezier(.36, .37, .57, 1);
-            animation-fill-mode: forwards;
-        }
+.bright {
+    filter: brightness(1);
+    transition-duration: 0.5s;
+}
 
-        @keyframes leftmove {
-            to {
-                transform: translateX(520px);
-            }
-        }
 
-        @keyframes rightmove {
-            to {
-                transform: translateX(-520px);
-            }
-        }
+/* 動作class */
+.moveleft {
+    animation-name: leftmove;
+    animation-duration: 0.8s;
+    animation-timing-function: cubic-bezier(.36, .37, .57, 1);
+    animation-fill-mode: forwards;
+}
 
-        .moveleft2 {
-            animation-name: leftmove2;
-            animation-duration: 0.8s;
-            animation-timing-function: cubic-bezier(.36, .37, .57, 1);
-            animation-fill-mode: forwards;
-        }
+.moveright {
+    animation-name: rightmove;
+    animation-duration: 0.8s;
+    animation-timing-function: cubic-bezier(.36, .37, .57, 1);
+    animation-fill-mode: forwards;
+}
 
-        .moveright2 {
-            animation-name: rightmove2;
-            animation-duration: 0.8s;
-            animation-timing-function: cubic-bezier(.36, .37, .57, 1);
-            animation-fill-mode: forwards;
-        }
+@keyframes leftmove {
+    to {
+        transform: translateX(520px);
+    }
+}
 
-        @keyframes leftmove2 {
-            to {
-                transform: translateX(1040px);
-            }
-        }
+@keyframes rightmove {
+    to {
+        transform: translateX(-520px);
+    }
+}
 
-        @keyframes rightmove2 {
-            to {
-                transform: translateX(-1040px);
-            }
-        }
+.moveleft2 {
+    animation-name: leftmove2;
+    animation-duration: 0.8s;
+    animation-timing-function: cubic-bezier(.36, .37, .57, 1);
+    animation-fill-mode: forwards;
+}
+
+.moveright2 {
+    animation-name: rightmove2;
+    animation-duration: 0.8s;
+    animation-timing-function: cubic-bezier(.36, .37, .57, 1);
+    animation-fill-mode: forwards;
+}
+
+@keyframes leftmove2 {
+    to {
+        transform: translateX(1040px);
+    }
+}
+
+@keyframes rightmove2 {
+    to {
+        transform: translateX(-1040px);
+    }
+}
