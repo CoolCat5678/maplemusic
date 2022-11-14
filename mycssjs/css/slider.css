@@ -40,7 +40,7 @@
     height: 300px;
     position: relative;
     overflow: hidden;
-    border: 1px white solid;
+    /* border: 1px white solid; */
     /* background-color: #fff; */
 }
 
@@ -66,6 +66,7 @@
     width: 99%;
     max-width: 500px;
     object-fit: contain;
+    border: 2px white solid;
 }
 
 #slider div.openimg img.onlight {

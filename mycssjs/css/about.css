@@ -1,8 +1,14 @@
+::-webkit-scrollbar {
+    display: none;
+  }
+
 #title h1{
     font-size: 300px;
+    color: #E03C8A;
 }
 
 p {
     font-size: 50px;
+    color: #E03C8A;
 }
 

@@ -1,3 +1,7 @@
+::-webkit-scrollbar {
+    display: none;
+  }
+
 #content {
     display: none;
 }
@@ -6,7 +10,7 @@
     margin: 200px;
     margin-top: 50px;
     background-color: black;
-    border: 1px white solid;
+    border: 1px #E03C8A solid;
 }
 
 
@@ -14,7 +18,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
+    color: #E03C8A;
     font-size: 150px;
 }
 
@@ -30,5 +34,5 @@
 p {
     text-align: left;
     font-size: 50px;
-    color: white;
+    color: #E03C8A;
 }
