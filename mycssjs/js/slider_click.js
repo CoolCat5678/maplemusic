@@ -4,22 +4,55 @@
 $(function () {
     var len = $("#slider div").length;
     var num = parseInt(len / 2);
+    // lockstate 
+    // 1 timelock
+    // 2 Imagelock
     var lockstate = 0;
     $("#slider div").css({ "left": `${(num - 1) * -520}px` })
     $("#slider div").eq(num).find("img").addClass("bright onlight").removeClass("dark");
 
 
+    // 重複點 關閉圖片
+    $("#slider div img").click(function () {
+        if (lockstate == 2) {
+            var index = $("#slider div img").index(this);
+            if (index == num) {
+                lockstate = 3,
+                    $("#slider div").each(function () {
+                        // 小於中間
+                        if ($("#slider div").index(this) < num) {
+                            $(this).css("left", "+=500")
+                        }
+                        // 大於於中間
+                        if ($("#slider div").index(this) > num) {
+                            $(this).css("left", "-=500")
+                        }
+
+                        $("#slider div").eq(index).removeClass("openimg")
+
+                        $("#content").css("display", "none")
+
+                        setTimeout(function () {
+                            $("#slider div").each(function () {
+                                $(this).removeClass("slowmove")
+                            })
+                            lockstate = 0;
+                        }, 800)
+                    });
+            }
+        }
+    })
 
     // 點擊圖片
     $("#slider div img").click(function () {
         if (lockstate == 0) {
             var index = $("#slider div img").index(this);
-
             // 點選發亮
             if (index == num) {
-                lockstate = 2;
+                lockstate = 1;
                 $("#slider div").each(function () {
                     $(this).addClass("slowmove")
+
                     // 小於中間
                     if ($("#slider div").index(this) < num) {
                         $(this).css("left", "-=500")
@@ -33,10 +66,10 @@ $(function () {
                 // 中間圖放大
                 $("#slider div").eq(index).addClass("openimg")
 
-                $("#content").css("display" , "block")
+                $("#content").css("display", "block")
 
                 setTimeout(function () {
-                    lockstate = 3;
+                    lockstate = 2;
                 }, 800)
             }
 
