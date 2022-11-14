@@ -1,0 +1,49 @@
+#content {
+    margin: 100px;
+    color: white;
+}
+
+#title {
+    font-size: 500px;
+    text-align: center;
+}
+
+.box {
+    font-size: 50px;
+    padding: 100px;
+    position: sticky;
+    top: 0px;
+}
+
+h2 {
+    font-size: 120px;
+}
+
+.box iframe {
+    margin-top: 170px;
+    width: 650px; 
+    height: 382px; 
+}
+
+/* .box div {
+    height: ;
+} */
+
+.textbox {
+    width: 40vw;
+    position: sticky;
+}
+
+.box:nth-child(odd) {
+    background-color: #434343;
+    display: flex;
+    justify-content: space-between;
+}
+
+.box:nth-child(even) {
+    background-color: #211E55;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* s */
