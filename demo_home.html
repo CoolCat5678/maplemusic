@@ -10,10 +10,13 @@
     <link rel="stylesheet" href="./mycssjs/css/slider.css">
     <link rel="stylesheet" href="./mycssjs/css/content.css">
     <link rel="stylesheet" href="./mycssjs/css/footer.css">
+    <link rel="stylesheet" href="./mycssjs/css/login.css">
     <script src="./js/jquery.min.js"></script>
     <script src="./js/popper.min.js"></script>
     <scripst src="./js/bootstrap.min.js"></scripst>
     <script src="./mycssjs/js/slider_click.js"></script>
+    <script src="./mycssjs/js/homelogin.js"></script>
+    <script src="./mycssjs/js/scroll.js"></script>
     <link rel="icon" href="./picture/mapleicon.png" type="image/x-icon" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -39,11 +42,14 @@
         * {
             font-family: 'Noto Sans TC', sans-serif;
         }
-        
+
     </style>
 </head>
 
 <body>
+    <div id="homelogin">
+        <h1>WELCOME</h1>
+    </div>
     <!-- navbar -->
     <nav class="navbar navbar-expand-lg fixed-top" style=" background-color: black">
         <div class="container-fluid">
@@ -82,102 +88,103 @@
             </div>
         </div>
     </nav>
+    <div id="scrollsnap">
+        <!-- 輪盤 -->
+        <div class="slider-outdiv">
+            <div id="slider" class="">
+                <div>
+                    <img src="./picture/ellinia.jpeg" alt="" class="dark">
+                </div>
 
-    <!-- 輪盤 -->
-    <div class="slider-outdiv">
-        <div id="slider" class="">
-            <div>
-                <img src="./picture/ellinia.jpeg" alt="" class="dark">
-            </div>
+                <div>
+                    <img src="./picture/kerning.jpeg" alt="" class="dark">
+                </div>
 
-            <div>
-                <img src="./picture/kerning.jpeg" alt="" class="dark">
-            </div>
+                <div>
+                    <img src="./picture/lith.jpeg" alt="" class="dark">
+                </div>
 
-            <div>
-                <img src="./picture/lith.jpeg" alt="" class="dark">
-            </div>
+                <div>
+                    <img src="./picture/perion.jpeg" alt="" class="dark">
+                </div>
 
-            <div>
-                <img src="./picture/perion.jpeg" alt="" class="dark">
-            </div>
+                <div>
+                    <img src="./picture/henesys.jpeg" alt="" class="dark">
+                </div>
 
-            <div>
-                <img src="./picture/henesys.jpeg" alt="" class="dark">
-            </div>
+                <div>
+                    <img src="./picture/ellinia.jpeg" alt="" class="dark">
+                </div>
 
-            <div>
-                <img src="./picture/ellinia.jpeg" alt="" class="dark">
-            </div>
+                <div>
+                    <img src="./picture/kerning.jpeg" alt="" class="dark">
+                </div>
 
-            <div>
-                <img src="./picture/kerning.jpeg" alt="" class="dark">
-            </div>
+                <div>
+                    <img src="./picture/lith.jpeg" alt="" class="dark">
+                </div>
 
-            <div>
-                <img src="./picture/lith.jpeg" alt="" class="dark">
-            </div>
+                <div>
+                    <img src="./picture/perion.jpeg" alt="" class="dark">
+                </div>
 
-            <div>
-                <img src="./picture/perion.jpeg" alt="" class="dark">
-            </div>
+                <div>
+                    <img src="./picture/henesys.jpeg" alt="" class="dark">
+                </div>
 
-            <div>
-                <img src="./picture/henesys.jpeg" alt="" class="dark">
-            </div>
+                <div>
+                    <img src="./picture/ellinia.jpeg" alt="" class="dark">
+                </div>
 
-            <div>
-                <img src="./picture/ellinia.jpeg" alt="" class="dark">
-            </div>
+                <div>
+                    <img src="./picture/kerning.jpeg" alt="" class="dark">
+                </div>
 
-            <div>
-                <img src="./picture/kerning.jpeg" alt="" class="dark">
-            </div>
+                <div>
+                    <img src="./picture/lith.jpeg" alt="" class="dark">
+                </div>
 
-            <div>
-                <img src="./picture/lith.jpeg" alt="" class="dark">
-            </div>
+                <div>
+                    <img src="./picture/perion.jpeg" alt="" class="dark">
+                </div>
 
-            <div>
-                <img src="./picture/perion.jpeg" alt="" class="dark">
-            </div>
-
-            <div>
-                <img src="./picture/henesys.jpeg" alt="" class="dark">
+                <div>
+                    <img src="./picture/henesys.jpeg" alt="" class="dark">
+                </div>
             </div>
         </div>
-    </div>
 
-    <div id="content">
-        <div class="introduce">
-            <div id="title">
-                <!-- <img src="" alt=""> -->
-                <h1>CoolCat</h1>
+        <div id="content">
+            <div class="introduce">
+                <div id="title">
+                    <!-- <img src="" alt=""> -->
+                    <h1>CoolCat</h1>
+                </div>
+                <p>[
+                    《新楓之谷結束營運公告》
+                    親愛的新楓之谷玩家您好：
+                    感謝大家對《新楓之谷》一路的支持與厚愛，也因為有你們，
+                    讓《新楓之谷》中不僅是激烈的競爭，同時也洋溢著歡聲笑語。
+                    這些年與玩家們經歷過遊戲內與遊戲外的各種驚奇之旅，
+                    那些熱血沸騰的過往與笑容是屬於我們的歷史與曾經，將鐫刻於回憶中，永不消散。
+                    由於《新楓之谷》與原廠的營運合約即將到期，
+                    即使不想說分離的話，但也不得不沉痛的宣佈，
+                    《新楓之谷》將於2023/1/31(二) 12:00PM 正式關閉伺服器。
+                    我們將竭力為所有玩家做到完善的後續處理服務，請各位密切注意以下時程，以維護自身的權益。
+                    關於在遊戲內尚有剩餘儲值取得楓點而未使用完畢的部分，近期將釋出相關公告，
+                    再麻煩各位玩家持續關注新楓之谷官網最新消息。
+                    [結束營運時間通知]
+                    ➟2022/11/1 19:00PM之後無法創立新的新楓之谷帳號
+                    ➟2022/11/4 維護時商城商品將全面調整為楓幣、楓點販售並移除楓點的儲值管道
+                    ➟2022/12/28 12:00PM beanfun!新楓之谷主題包移除
+                    ➟2023/1/31 12:00PM 關閉伺服器，屆時將無法再登入遊戲
+                    營運團隊多年來與各位玩家一同成長，對《新楓之谷》擁有一份難以割捨的情感，
+                    但天下無不散的筵席，《新楓之谷》的精神將與玩家們永遠同在。
+                    營運團隊再次感謝所有玩家長期對《新楓之谷》的支持與愛護，
+                    在最後的時光，預祝各位玩家遊戲愉快。
+                    《新楓之谷》營運團隊　敬上
+                </p>
             </div>
-            <p>[
-                《新楓之谷結束營運公告》
-                親愛的新楓之谷玩家您好：
-                感謝大家對《新楓之谷》一路的支持與厚愛，也因為有你們，
-                讓《新楓之谷》中不僅是激烈的競爭，同時也洋溢著歡聲笑語。
-                這些年與玩家們經歷過遊戲內與遊戲外的各種驚奇之旅，
-                那些熱血沸騰的過往與笑容是屬於我們的歷史與曾經，將鐫刻於回憶中，永不消散。
-                由於《新楓之谷》與原廠的營運合約即將到期，
-                即使不想說分離的話，但也不得不沉痛的宣佈，
-                《新楓之谷》將於2023/1/31(二) 12:00PM 正式關閉伺服器。
-                我們將竭力為所有玩家做到完善的後續處理服務，請各位密切注意以下時程，以維護自身的權益。
-                關於在遊戲內尚有剩餘儲值取得楓點而未使用完畢的部分，近期將釋出相關公告，
-                再麻煩各位玩家持續關注新楓之谷官網最新消息。
-                [結束營運時間通知]
-                ➟2022/11/1 19:00PM之後無法創立新的新楓之谷帳號
-                ➟2022/11/4 維護時商城商品將全面調整為楓幣、楓點販售並移除楓點的儲值管道
-                ➟2022/12/28 12:00PM beanfun!新楓之谷主題包移除
-                ➟2023/1/31 12:00PM 關閉伺服器，屆時將無法再登入遊戲
-                營運團隊多年來與各位玩家一同成長，對《新楓之谷》擁有一份難以割捨的情感，
-                但天下無不散的筵席，《新楓之谷》的精神將與玩家們永遠同在。
-                營運團隊再次感謝所有玩家長期對《新楓之谷》的支持與愛護，
-                在最後的時光，預祝各位玩家遊戲愉快。
-                《新楓之谷》營運團隊　敬上
-            </p>
         </div>
     </div>
 

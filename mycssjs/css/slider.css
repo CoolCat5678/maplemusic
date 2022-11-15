@@ -24,7 +24,7 @@
 
 @media (min-width: 2600px) {
     #slider {
-        /* overflow: hidden; */
+        overflow: hidden;
         width: 2600px;
         /* border: 2px rgb(12, 172, 235) solid; */
         padding-left: 500px;
@@ -50,7 +50,7 @@
 
 #slider div.openimg {
     transform: scale(2);
-    border: 5px #E03C8A solid;
+    /* border: 5px #E03C8A solid; */
     transition-duration: 0.8s;
 }
 

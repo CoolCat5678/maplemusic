@@ -1,0 +1,27 @@
+#login {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 1);
+    transition-duration: 2s;
+    position: fixed;
+    /* visibility: hidden; */
+    z-index: 200;
+}
+
+#homelogin {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 1);
+    transition-duration: 2s;
+    position: fixed;
+    /* visibility: hidden; */
+    z-index: 200;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#homelogin h1 {
+    color: #E03C8A;
+    transition-duration: 1s;
+}

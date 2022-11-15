@@ -1,54 +1,65 @@
 ::-webkit-scrollbar {
     display: none;
-  }
+}
+
+* {
+    /* border: greenyellow 1px solid; */
+}
 
 #content {
     margin: 60px 100px 0px 100px;
-    /* position: sticky; */
-    /* top: 60px; */
+    scroll-snap-type: y mandatory;
+    height: 85vh;
+    overflow: scroll;
 }
 
 #title {
-    /* padding-top: 60px;
-    position: fixed; */
+    padding-top: 25vh;
+    scroll-snap-align: center;
+    /* visibility: hidden; */
 }
 
-#title h1{
+#title h1 {
     font-size: 180px;
     text-align: center;
-    color:  #E03C8A;
+    color: rgba(255,255,255,0);
+    transition-duration: 0.5s;
 }
 
 h2 {
     font-size: 100px;
 }
 
+/* #bigbox {
+    scroll-snap-align: start;
+    scroll-snap-type: y mandatory;
+    scroll-padding-top: 150px;
+} */
+
+#bigbox {
+    /* padding-top: 80vh; */
+    margin-top: 70vh;
+    /* margin-bottom:5vh; */
+    height: 82vh;
+    scroll-snap-align: start;
+    scroll-snap-type: y mandatory;
+    /* position: relative; */
+    overflow: scroll;
+}
+
 .box {
-    height: 100vh;
+    height: 82vh;
     font-size: 30px;
     padding: 100px 100px 100px 100px;
     position: sticky;
-    top: 100px;
+    scroll-snap-align: start;
+    top: 0;
 }
 
 .box iframe {
     margin-top: 10vh;
-    width: 30vw; 
-    height: 40vh; 
-}
-
-#bigbox {
-    top: 0px;
-}
-
-.textbox {
-    /* width: 40vw; */
-    position: sticky;
-    top: 150px;
-}
-
-.textbox p{
-    overflow: scroll;
+    width: 30vw;
+    height: 40vh;
 }
 
 .box:nth-child(odd) {
@@ -62,15 +73,15 @@ h2 {
     background-color: #080808;
     display: flex;
     justify-content: space-between;
-    color:  #E03C8A;
+    color: #E03C8A;
 }
 
 
 .box:nth-last-child(1) {
-    margin-bottom: -100px;
+    margin-bottom: -150px;
 }
 
-.box>div {
-    width: 35vw; 
+.box > div {
+    width: 35vw;
     height: 40vh;
 }

@@ -66,7 +66,7 @@ $(function () {
                 // 中間圖放大
                 $("#slider div").eq(index).addClass("openimg")
 
-                $("#content").css("display", "block")
+                $("#content").css("display", "flex")
 
                 setTimeout(function () {
                     lockstate = 2;
