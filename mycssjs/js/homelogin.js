@@ -18,7 +18,7 @@ $(function () {
 
                         setTimeout(function () {
                             $("#homelogin").css("display", "none")
-                        }, 2100)
+                        }, 3100)
                     })
                 })
             }, 1000)

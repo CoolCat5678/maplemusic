@@ -15,6 +15,7 @@
     <scripst src="./js/bootstrap.min.js"></scripst>
     <script src="./mycssjs/js/slider_click.js"></script>
     <script src="./mycssjs/js/login.js"></script>
+    <script src="./mycssjs/js/ref.js"></script>
     <link rel="icon" href="./picture/mapleicon.png" type="image/x-icon" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -45,6 +46,7 @@
 
 <body>
     <div id="login"></div>
+    <div class="leave"></div>
     <!-- navbar -->
     <nav class="navbar navbar-expand-sm fixed-top" style=" background-color: black">
         <div class="container-fluid">
@@ -65,19 +67,21 @@
                 <ul class="navbar-nav">
 
                     <li class="nav-item">
-                        <a class="nav-link button-animate" aria-current="page" href="./demo_home.html">首頁</a>
+                        <a class="nav-link button-animate" aria-current="page"
+                            href="javascript:delay('./demo_home.html')">首頁</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link button-animate" href="./demo_music.html">音樂</a>
+                        <a class="nav-link button-animate" href="javascript:delay('./demo_music.html')">音樂</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link button-animate" href="./demo_about.html">關於</a>
+                        <a class="nav-link button-animate" href="javascript:delay('./demo_about.html')">關於</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link button-animate" href="https://maplestory.beanfun.com/main" target="_blank">楓谷</a>
+                        <a class="nav-link button-animate" href="javascript:delay('https://maplestory.beanfun.com/main')"
+                            target="_blank">楓谷</a>
                     </li>
                 </ul>
             </div>
