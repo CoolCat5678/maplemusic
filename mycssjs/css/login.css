@@ -22,6 +22,6 @@
 }
 
 #homelogin h1 {
-    color: #E03C8A;
+    color: rgba(255,255,255,0);
     transition-duration: 1s;
 }
